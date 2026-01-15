@@ -38,6 +38,24 @@ const playGame = (userChoice) => {
     const compChoice = genCompChoice();
     console.log("comp choice = ", compChoice);
 
+    if(userChoice === compChoice) {
+        //Draw choice
+        drawGame();
+    }else {
+        var userWin = true;
+        if (userChoice === "rock") {
+            //secissors, paper
+            compChoice === "paper" ? false : true;
+        } else if (userChoice === "paper") {
+            //rock,scissors
+           userWin = compChoice === "scissors" ? false : true;
+        } else {
+            //rock,paper
+           userWin = compChoice === "rock" ? false : true;
+        }
+         showWinner(userWin);
+        }
+    };
 
 
 choices.forEach((choice) => {
