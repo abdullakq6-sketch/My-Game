@@ -32,6 +32,11 @@ const showWinner = (userWin) => {
 }
 };
 
+const playGame = (userChoice) => {
+    console.log("user choice = ", userChoice);
+    // Generate computer choice -> Modular;
+    const compChoice = genCompChoice();
+    console.log("comp choice = ", compChoice);
 
     if(userChoice === compChoice) {
         //Draw choice
