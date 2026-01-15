@@ -18,7 +18,19 @@ const drawGame = () => {
     msg.style.backgroundColor = "#081b31";
 };
 
-
+const showWinner = (userWin) => {
+  if (userWin) {
+    userScore++;
+    userScorePara.innerText = userScore;
+    msg.innerText = "You win!";
+    msg.style.backgroundColor = "green";
+  } else {
+    compScore++;
+    compScorePara.innerText = compScore;
+     msg.innerText = "You lose.";
+     msg.style.backgroundColor = "red";
+}
+};
 
 const playGame = (userChoice) => {
     console.log("user choice = ", userChoice);
